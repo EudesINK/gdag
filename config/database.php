@@ -70,7 +70,7 @@ return [
             'username' => $username,
             'password' => $password,
             'charset' => 'utf8',
-            'collation' => 'utf8_unicod_ci',
+            'collation' => 'utf8_unicode_ci',
             'profix' => '',
         ),
 
