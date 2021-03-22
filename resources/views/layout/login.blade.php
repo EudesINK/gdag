@@ -37,15 +37,16 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Bem-vindo ao GDag!</h1>
                                     </div>
-                                    <form>
+                                    <form method="POST" action="{{route('usuario_login')}}">
+                                    @csrf
                                       <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Endereço de e-mail</label>
-                                        <input placeholder="Digite seu e-mail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <input placeholder="Digite seu e-mail" name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                         <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
                                       </div>
                                       <div class="mb-3">
                                         <label for="exampleInputPassword1" class="form-label">Senha</label>
-                                        <input placeholder="Digite sua senha" type="password" class="form-control" id="exampleInputPassword1">
+                                        <input placeholder="Digite sua senha" name="password" type="password" class="form-control" id="exampleInputPassword1">
                                       </div>
                                       <center><button type="submit" class="btn btn-primary">Entrar</button></center>
                                     </form>

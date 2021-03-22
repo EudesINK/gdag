@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +16,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+
 Route::get('/', function() {
-    return view('layout.index');
+    return view('layout/login');
 });
+
+Route::get('/', LoginController::class)->name('login');
+
+Route::post('painel', [UsuarioController::class, 'login'])->name('usuario_login');
+
+Route::get('logout', [UsuarioController::class, 'logout'])->name('usuario_logout');
+
+// Route::get('home/{user}', function($user) {
+//     $user = User::find($user);
+//     if ($user) {
+//     	$tarefa = $user->tarefa;
+//     	return view('layout.home', ['tarefa' => $tarefa]);
+//     }
+//     return 'usuario nao logado';
+//     //return view('layout.home');
+//     return redirect()->to(route('layout.index'));
+//});
+
+// Route::get('login/home', function() {
+//     return view('layout/home');
+// });
