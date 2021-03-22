@@ -27,17 +27,6 @@ Route::post('painel', [UsuarioController::class, 'login'])->name('usuario_login'
 
 Route::get('logout', [UsuarioController::class, 'logout'])->name('usuario_logout');
 
-// Route::get('home/{user}', function($user) {
-//     $user = User::find($user);
-//     if ($user) {
-//     	$tarefa = $user->tarefa;
-//     	return view('layout.home', ['tarefa' => $tarefa]);
-//     }
-//     return 'usuario nao logado';
-//     //return view('layout.home');
-//     return redirect()->to(route('layout.index'));
-//});
+Route::get('usuario/cadastrar', [UsuarioController::class, 'cadastrar'])->name('usuario_cadastrar');
 
-// Route::get('login/home', function() {
-//     return view('layout/home');
-// });
+Route::post('usuario/inserir', [UsuarioController::class, 'inserir'])->name('usuario_inserir');

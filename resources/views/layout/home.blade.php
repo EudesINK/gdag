@@ -33,7 +33,7 @@
                         <div class="btn-group dropright ">
                             <div class="dropdown">
                             <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="avatar.png">Ricardo
+                            <img src="avatar.png">Logout
                             </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                 <li><a class="dropdown-item" href="{{route('usuario_logout')}}">Sair</a></li>
@@ -129,33 +129,10 @@
                                            <th>Editar</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Nome da atividade</th>
-                                            <th>Prioridades</th>
-                                            <th>Aberta em</th>
-                                            <th>Previsão de término</th>
-                                            <th>Editar</th>
-                                        </tr>
-                                    </tfoot>
                                     <tbody>
                                         <tr>
                                             <td>Projetar HTML</td>
                                             <td>Alta</td>
-                                            <td>Hoje</td>
-                                            <td>Amanhã</td>
-                                            <th><button class="botoes" class="btn-icon-split">Editar</button></th>
-                                        </tr>
-                                        <tr>
-                                            <td>Estudar Laravel</td>
-                                            <td>Alta</td> 
-                                            <td>Hoje</td>
-                                            <td>Amanhã</td>
-                                            <th><button class="botoes" class="btn-icon-split">Editar</button></th>
-                                        </tr>
-                                        <tr>
-                                            <td>Fazer backend</td>
-                                            <td>Intermediária</td>
                                             <td>Hoje</td>
                                             <td>Amanhã</td>
                                             <th><button class="botoes" class="btn-icon-split">Editar</button></th>

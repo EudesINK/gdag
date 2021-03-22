@@ -54,7 +54,7 @@
                                         <a class="small" href="#">Esqueceu sua senha?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="cadastro.php">Criar conta!</a>
+                                        <a class="small" href="{{route('usuario_cadastrar')}}">Criar conta!</a>
                                     </div>
                                 </div>
                             </div>

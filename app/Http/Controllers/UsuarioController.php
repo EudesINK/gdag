@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
@@ -31,5 +32,22 @@ class UsuarioController extends Controller
     	@session_destroy();
 
     	return view('layout/login');
+    }
+
+    public function cadastrar(){
+    	return view('layout/cadastro');
+    }
+
+    public function inserir(Request $request){
+    	$user = new user;
+    	$user->name = $request->name;
+    	$user->email = $request->email;
+    	$user->password = bcrypt($request->password);
+    	$user->email_verified_at = now();
+    	$user->remember_token = Str::random(10);
+
+    	$user->save();
+		
+		return view('layout/login');
     }
 }
