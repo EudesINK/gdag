@@ -50,11 +50,7 @@
                                       </div>
                                       <center><button type="submit" class="btn btn-primary">Entrar</button></center>
                                     </form>
-                                    <div class="text-center">
-                                        <a class="small" href="#">Esqueceu sua senha?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="{{route('usuario_cadastrar')}}">Criar conta!</a>
+                                        <center><a class="small" href="{{route('usuario_cadastrar')}}">Criar conta!</a></center>
                                     </div>
                                 </div>
                             </div>

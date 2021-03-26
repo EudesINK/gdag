@@ -17,7 +17,7 @@ class CreateTarefasTable extends Migration
             $table->id();
             $table->string('nome');
             $table->string('prioridade');
-            $table->timestamp('dt_abertura')->nullable();
+            $table->timestamp('dt_abertura')->now();
             $table->timestamp('dt_termino')->nullable();
 
             $table->UnsignedBigInteger('user');

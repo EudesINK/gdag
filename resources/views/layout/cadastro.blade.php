@@ -2,9 +2,8 @@
 <html lang="en">
   <head>
     <style type="text/css">
-        #img{
-            height: 520px;
-            width: 500px;
+        #div{
+            width: 700px;
         }
     </style>
     <!-- Required meta tags -->
@@ -16,22 +15,19 @@
 
     <title>GDag - Cadastro de Usuário!</title>
   </head>
-  <body style="background-color: lightblue;">
+  <center><body style="background-color: lightblue;">
     
     <div class="container">
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
 
-            <div class="col-xl-10 col-lg-12 col-md-9">
+            <div id="div" class="col-xl-10 col-lg-12 col-md-9">
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image">
-                                <img id="img" src="imagem.jpg">
-                            </div>
+                        
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
@@ -57,7 +53,7 @@
                                           <center><button type="submit" class="btn btn-primary">Entrar</button></center>
                                     </form>
                                     <div class="text-center">
-                                        <a class="small" href="index.php">Já tem uma conta? Faça login!</a>
+                                        <a class="small" href="{{route('usuario_conta')}}">Já tem uma conta? Faça login!</a>
                                     </div>
                                 </div>
                             </div>
@@ -94,4 +90,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
     -->
   </body>
+  <center>
 </html>

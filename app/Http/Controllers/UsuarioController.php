@@ -19,11 +19,11 @@ class UsuarioController extends Controller
     		$_SESSION['id'] = $usuarios->id;
     		$_SESSION['name'] = $usuarios->name;
 
-    		return view('layout/home');
+    		return view('layout.home');
     	}else{
-    		echo "<script language='javascript'> window.alert('Os dados Incorretos.') </script>";
+    		echo "<script language='javascript'> window.alert('Os dados estão incorretos.') </script>";
 
-    		return view('layout/login');
+    		return view('layout.login');
     	}
     }
 
@@ -31,18 +31,22 @@ class UsuarioController extends Controller
     	@session_start();
     	@session_destroy();
 
-    	return view('layout/login');
+    	return view('layout.login');
     }
 
     public function cadastrar(){
-    	return view('layout/cadastro');
+    	return view('layout.cadastro');
+    }
+
+    public function conta(){
+        return view('layout.login');
     }
 
     public function inserir(Request $request){
     	$user = new user;
     	$user->name = $request->name;
     	$user->email = $request->email;
-    	$user->password = bcrypt($request->password);
+    	$user->password = $request->password;
     	$user->email_verified_at = now();
     	$user->remember_token = Str::random(10);
 
